@@ -1,0 +1,41 @@
+{% extends "base_template.html" %}
+
+{% block title %}Miniblog{% endblock %}
+
+{% block content %}
+	<div id="jumbo" class="jumbotron container">
+		<h1 class="display-4">Bienvenidos a Blogone!</h1>
+		<p class="lead">Un espacio donde hablamos sobre diversos temas de culto y nos centramos en el blogin social donde compartimos nuestros puntos de vistas y ideas, sentite libre de leer nuestro extenso catalogo de temas y adentrarte en un mundo fascinante, todo desde un enfoque minimalista.</p>
+	</div>
+	<div class="container"><hr class="my-4"></div>
+	<div id="postgrid" class="container">
+		<div class="row">
+			{% for post in post_pagination.items %}
+				<div class="col-md-4 col-sm-4 col-xs-4 col-lg-4">
+					<div class="card bg-light mb-3" style="max-width: 20rem;">
+						<div class="card-header"><span class="postCreated">({{ post.created|datetime }})</span></div>
+						<div class="card-body">
+						    <h4 class="card-title"><a href="{{ url_for('public.show_post', slug=post.title_slug) }}">{{ post.title }}</a></h4>
+						    <p class="card-text limitchar">{{ post.content }}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div id="pagcenter" class="container">
+		<div class=pagination>
+			{%- for page in post_pagination.iter_pages() %}
+				{% if page %}
+					{% if page != post_pagination.page %}
+						<a href="{{url_for('public.index', page=page) }}">{{ page }}</a>
+					{% else %}
+						<strong>{{ page }}</strong>
+					{% endif %}
+				{% else %}
+					<span class=ellipsis>...</span>
+				{% endif %}
+			{%- endfor %}
+		</div>
+	</div>
+{% endblock %}
