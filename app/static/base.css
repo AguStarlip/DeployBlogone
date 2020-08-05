@@ -208,7 +208,6 @@ sup, sub {
 }
 /* media query del menu desplegable */
 @media screen and (max-width: 600px) {
-    
     .main {
         display: flex;
         flex-direction: column;
