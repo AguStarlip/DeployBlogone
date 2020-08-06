@@ -6,7 +6,7 @@
         <div>
             <span class="blogDate">{{ post.created|datetime('full') }}</span>
         </div>
-        <h1 style="margin: 2% 0% 4% 0%;">{{ post.title }}</h1>
+        <h1 id="altersec-h1" style="margin: 2% 0% 4% 0%;">{{ post.title }}</h1>
         {% if post.image_name %}
             <div>
                 <img src="{{ url_for('media_posts', filename=post.image_name) }}"/>
