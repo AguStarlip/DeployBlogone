@@ -110,7 +110,7 @@
 }
 
 div#pagcenter {
-    margin-left: 48% !important; 
+    margin-left: 48%; 
 }
 
 * {
@@ -178,8 +178,10 @@ header .logo {
 header .texto-borde {
     -webkit-text-stroke: 0.5px black; 
 }
+.page-footer{
+    width: 103%;
+}
 footer {
-    width: 103% !important;
     background-color: var(--colorcustom2);
 }
 label {
