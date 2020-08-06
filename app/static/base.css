@@ -57,15 +57,17 @@
     max-width: 330px;
     padding: 15px;
     margin: auto;
+    margin-bottom: 22% !important;
     border-radius: 10px;
     border: 1px solid grey;
     background-color: var(--colorcustom2);
 }
 .form-signup {
     width: 100%;
-    max-width: 420px;
+    max-width: 330px;
     padding: 15px;
     margin: auto;
+    margin-bottom: 22% !important;
     border-radius: 10px;
     border: 1px solid grey;
     background-color: var(--colorcustom2);
@@ -233,6 +235,9 @@ sup, sub {
         margin-right: 10%;
         text-align: justify;
     }
+    #altersection h1 {
+        text-align: left;
+    }
     #alteraside {
         grid-area: my-aside;
         margin-bottom: 10%;
@@ -293,5 +298,8 @@ sup, sub {
     #comments{
         margin-bottom: 7%;
         width: max-content;
+    }
+    #name{
+        width: 200px;
     }
 }
