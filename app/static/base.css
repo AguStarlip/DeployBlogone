@@ -72,6 +72,9 @@
     border: 1px solid grey;
     background-color: var(--colorcustom2);
 }
+#name{
+    width: 205px;
+}
 .limitchar {
     overflow: hidden;
     display: -webkit-box;
@@ -300,6 +303,6 @@ sup, sub {
         width: max-content;
     }
     #name{
-        width: 200px;
+        width: 205px;
     }
 }
